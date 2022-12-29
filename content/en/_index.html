@@ -9,8 +9,8 @@ linkTitle = "locKVal"
 	<a class="btn btn-lg btn-primary mr-3 mb-4" href="{{< relref "/docs" >}}">
 		Learn More <i class="fas fa-arrow-alt-circle-right ml-2"></i>
 	</a>
-	<a class="btn btn-lg btn-secondary mr-3 mb-4" href="https://github.com/google/docsy-example">
-		Download <i class="fab fa-github ml-2 "></i>
+	<a class="btn btn-lg btn-secondary mr-3 mb-4" href="{{< relref "/downloads" >}}">
+		Download <i class="fa fa-download"></i>
 	</a>
 	<p class="lead mt-7">Lockval Engine is a distributed SERVER DATA engine</p>
 	<p class="lead mt-7">that can simulate the rules of the world in your imagination</p>
@@ -20,38 +20,97 @@ linkTitle = "locKVal"
 
 
 {{% blocks/lead color="primary" %}}
-Goldydocs provides a single web UI providing visibility into porridge temperature, chair size, and bed softness metrics! You can even find out who's been eating **your** porridge.
+Lockval Engine is a distributed SERVER DATA engine. 
 
-(Sadly, Goldydocs isn't a real project, but you can use this site as an example to create your own real websites with [Docsy](https://docsy.dev))
+It integrates network communication module, data storage module and logic script processing module, as well as timer module and external trigger module. 
+
+You just need to deal with ***request***, ***response*** and ***Get data*** , ***Calculation*** and ***Set data***. 
+
+The change data will be automatically synchronized to the interface caller.
+
 {{% /blocks/lead %}}
 
 {{< blocks/section color="dark" >}}
-{{% blocks/feature icon="fa-lightbulb" title="New chair metrics!" %}}
-The Goldydocs UI now shows chair size metrics by default.
+{{% blocks/feature icon="fa-baby" title="Easy to use" %}}
 
-Please follow this space for updates!
+{{< card-code header="**C**" lang="JavaScript" >}}
+// request
+main(input){
+  // Get data
+  input.GetSubVal(input.UID,"mBase","Count")
+  input.GetAndLock()
+
+  // Calculation
+  let c = input.GetResp.IDKey[input.UID].
+  	KeySub["mBase"].SubVal["Count"]
+  let ci = Number(c)
+  ci++
+  c = ci.toString()
+	
+  // Set data
+  input.PutSubVal(input.UID,"mBase","Count",c)
+  input.PutAndUnlock()
+
+  // response
+  return { "resp": "this is resp" }
+}
+{{< /card-code >}}
+{{% /blocks/feature %}}
+
+{{% blocks/feature icon="fab fa-github" title="Multiple programming script support" url="https://lockval.com/docs/languages" %}}
+[***Lua(5.1)***](https://www.lua.org/manual/5.1/)
+
+- Lua a lightweight, high-level, multi-paradigm programming language.
+
+[***JavaScript(TypeScript)***](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
+
+- JavaScript  is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions.
+
+[***Python(Starlark)***](https://bazel.build/rules/language)
+
+- Starlark is a dialect of Python. Like Python, it is a dynamically typed language with high-level data types.
+
+[***Golang***](https://go.dev/doc/)
+
+- Go is a statically typed, compiled programming language. Use golang to achieve higher performance programs.
+
 {{% /blocks/feature %}}
 
 
-{{% blocks/feature icon="fab fa-github" title="Contributions welcome!" url="https://github.com/google/docsy-example" %}}
-We do a [Pull Request](https://github.com/google/docsy-example/pulls) contributions workflow on **GitHub**. New users are always welcome!
-{{% /blocks/feature %}}
+{{% blocks/feature icon="fa fa-braille" title="Module（services) Introduction" url="https://lockval.com/docs/services" %}}
+
+***gw***
+
+- Responsible for processing data communication, sending requests to api, and synchronizing to callers when db data changes
+
+***api***
+
+- Respond to the request and process the data using the user's server-side script
+
+***db***
+
+- Responsible for processing GetAndLock and PutAndUnlock, locking data when obtaining data, and unlocking data after modifying data. Data is cached in memory during use and released when not in use.
+
+***timer***
+
+- Realize the user's timing service
 
 
-{{% blocks/feature icon="fab fa-twitter" title="Follow us on Twitter!" url="https://twitter.com/docsydocs" %}}
-For announcement of latest features etc.
 {{% /blocks/feature %}}
 
 
 {{< /blocks/section >}}
 
 
-{{< blocks/section >}}
+
+<!-- 
+
+{{< blocks/lead >}}
 <div class="col">
 <h1 class="text-center">This is the second Section</h1>
 </div>
 
-{{< /blocks/section >}}
+{{< /blocks/lead >}}
 
 
 
@@ -62,7 +121,7 @@ Get the Goldydocs app!
 {{% /blocks/feature %}}
 
 
-{{% blocks/feature icon="fab fa-github" title="Contributions welcome!" url="https://github.com/google/docsy-example" %}}
+{{% blocks/feature icon="fab fa-github" title="Contributions welcome!1" url="https://github.com/google/docsy-example" %}}
 We do a [Pull Request](https://github.com/google/docsy-example/pulls) contributions workflow on **GitHub**. New users are always welcome!
 {{% /blocks/feature %}}
 
@@ -74,13 +133,13 @@ For announcement of latest features etc.
 
 {{< /blocks/section >}}
 
-{{< blocks/section >}}
+{{< blocks/lead >}}
 
 <div class="col-12">
 <h1 class="text-center">This is another Section</h1>
 </div>
 
-{{< /blocks/section >}}
+{{< /blocks/lead >}}
 
 {{< blocks/section >}}
 
@@ -98,4 +157,7 @@ We do a [Pull Request](https://github.com/google/docsy-example/pulls) contributi
 For announcement of latest features etc.
 {{% /blocks/feature %}}
 
+{{< /blocks/section >}} -->
+
+{{< blocks/section >}}
 {{< /blocks/section >}}
