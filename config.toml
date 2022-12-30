@@ -42,8 +42,8 @@ pygmentsUseClassic = false
 pygmentsStyle = "tango"
 
 # Configure how URLs look like per section.
-[permalinks]
-blog = "/:section/:year/:month/:day/:slug/"
+# [permalinks]
+# blog = "/:section/:year/:month/:day/:slug/"
 
 # Image processing configuration.
 [imaging]
@@ -60,7 +60,7 @@ id = "UA-00000000-0"
 
 [languages]
 [languages.en]
-title = "locKVal"
+title = "Lockval Engine"
 description = "A distributed,reliable key-value service engine that can run scripts."
 languageName ="English"
 # Weight used for sorting.
@@ -86,7 +86,7 @@ weight = 1
 section = ["HTML", "print", "RSS"]
 
 [params]
-copyright = "The locKVal Authors"
+copyright = "The Lockval Engine Authors"
 # privacy_policy = "https://policies.google.com/privacy"
 
 # First one is picked as the Twitter card image if not set on page.
@@ -213,3 +213,15 @@ enable = false
   [[module.imports]]
     path = "github.com/google/docsy/dependencies"
     disable = false
+
+
+[[menu.main]]
+    name = "apidemo"
+    weight = 50
+    url = "https://apidemo.lockval.com"
+    pre = "<i class='fa fa-link'></i>"
+[[menu.main]]
+    name = "playground"
+    weight = 50
+    url = "https://playground.lockval.com"
+    pre = "<i class='fa fa-link'></i>"

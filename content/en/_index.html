@@ -1,18 +1,18 @@
 +++
-title = "locKVal"
-linkTitle = "locKVal"
+title = "Lockval Engine"
+linkTitle = "Lockval Engine"
 
 +++
 
-{{< blocks/cover title="Welcome to locKVal" image_anchor="top" height="full" color="orange" >}}
+{{< blocks/cover title="Welcome to Lockval Engine" image_anchor="top" height="full" color="orange" >}}
 <div class="mx-auto">
 	<a class="btn btn-lg btn-primary mr-3 mb-4" href="{{< relref "/docs" >}}">
 		Learn More <i class="fas fa-arrow-alt-circle-right ml-2"></i>
 	</a>
-	<a class="btn btn-lg btn-secondary mr-3 mb-4" href="{{< relref "/downloads" >}}">
+	<a class="btn btn-lg btn-secondary mr-3 mb-4" href="{{< relref "/community" >}}">
 		Download <i class="fa fa-download"></i>
 	</a>
-	<p class="lead mt-7">Lockval Engine is a distributed SERVER DATA engine</p>
+	<p class="lead mt-7">Lockval Engine is a distributed backend DATA engine</p>
 	<p class="lead mt-7">that can simulate the rules of the world in your imagination</p>
 	{{< blocks/link-down color="info" >}}
 </div>
@@ -20,11 +20,11 @@ linkTitle = "locKVal"
 
 
 {{% blocks/lead color="primary" %}}
-Lockval Engine is a distributed SERVER DATA engine. 
+Lockval Engine is a distributed backend Key-Value engine. 
 
-It integrates network communication module, data storage module and logic script processing module, as well as timer module and external trigger module. 
+It integrates network gateway module, data storage module and logic script processing module, as well as triggers module.
 
-You just need to deal with ***request***, ***response*** and ***Get data*** , ***Calculation*** and ***Set data***. 
+You just need to deal with ***request***, ***response*** and ***Get data*** , ***Calculation*** and ***Set data***.
 
 The change data will be automatically synchronized to the interface caller.
 
@@ -35,7 +35,7 @@ The change data will be automatically synchronized to the interface caller.
 
 {{% blocks/feature icon="fab fa-github" title="Multiple programming script support" url="https://lockval.com/docs/languages" %}}
 [***Lua(5.1)***](https://www.lua.org/manual/5.1/)
-
+lock
 - Lua a lightweight, high-level, multi-paradigm programming language.
 
 [***JavaScript(TypeScript)***](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
@@ -94,9 +94,10 @@ main(input){
 
 - Responsible for processing GetAndLock and PutAndUnlock, locking data when obtaining data, and unlocking data after modifying data. Data is cached in memory during use and released when not in use.
 
-***timer***
+***trigger***
 
-- Realize the user's timing service
+- Provides a variety of triggers to trigger script execution, including:
+timer, cron, http action, upload script
 
 
 {{% /blocks/feature %}}
@@ -106,11 +107,11 @@ main(input){
 
 
 
-<!-- 
+
 
 {{< blocks/lead >}}
 <div class="col">
-<h1 class="text-center">This is the second Section</h1>
+<h1 class="text-center">Why Lockval Engine</h1>
 </div>
 
 {{< /blocks/lead >}}
@@ -119,24 +120,39 @@ main(input){
 
 {{< blocks/section >}}
 
-{{% blocks/feature icon="fab fa-app-store-ios" title="Download **from AppStore**" %}}
-Get the Goldydocs app!
+{{% blocks/feature icon="fa fa-graduation-cap" title="Learn Quickly" url="https://lockval.com/docs/learn" %}}
+
+Lockval Engine is an out-of-the-box engine
+
+You only need to download the [apidemo](https://github.com/lockval/apidemo) program to run the engine
+
+Through the online [apidemo](https://apidemo.lockval.com) and [playground](https://playground.lockval.com) projects, you can quickly understand the use of api.
+
 {{% /blocks/feature %}}
 
 
-{{% blocks/feature icon="fab fa-github" title="Contributions welcome!1" url="https://github.com/google/docsy-example" %}}
-We do a [Pull Request](https://github.com/google/docsy-example/pulls) contributions workflow on **GitHub**. New users are always welcome!
+{{% blocks/feature icon="fa fa-keyboard" title="Build Quickly" url="https://lockval.com/docs/use" %}}
+
+You just need to surround  ***request***, ***response*** and ***Get data*** , ***Calculation*** and ***Set data***.
+
+that can complete a simple business development.
+
 {{% /blocks/feature %}}
 
 
-{{% blocks/feature icon="fab fa-twitter" title="Follow us on Twitter!" url="https://twitter.com/GoHugoIO" %}}
-For announcement of latest features etc.
+{{% blocks/feature icon="fa fa-desktop" title="All In One" url="https://lockval.com/docs/allinone" %}}
+You don't need to think about how to choose a database, 
+
+how to design a protocol, design timers, triggers.
+
+you only need to care about data processing to complete all the functions you need
+
 {{% /blocks/feature %}}
 
 
 {{< /blocks/section >}}
 
-{{< blocks/lead >}}
+<!-- {{< blocks/lead >}}
 
 <div class="col-12">
 <h1 class="text-center">This is another Section</h1>
@@ -162,5 +178,4 @@ For announcement of latest features etc.
 
 {{< /blocks/section >}} -->
 
-{{< blocks/section >}}
-{{< /blocks/section >}}
+
