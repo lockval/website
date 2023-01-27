@@ -1,13 +1,13 @@
 ---
-title: "Quickstart"
-linkTitle: "Quickstart"
+title: "Blog"
+linkTitle: "Blog"
 menu:
   main:
     weight: 30
 ---
 
 
-This is the **Quickstart** section. It has two categories: News and Releases.
+This is the **Blog** section. It has two categories: News and Releases.
 
 Files in these directories will be listed in reverse chronological order.
 
