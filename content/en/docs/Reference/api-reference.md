@@ -1,6 +1,6 @@
 ---
-title: "Another Tutorial"
-weight: 5
+title: "API Reference"
+linkTitle: "API Reference"
 description: >
   This page is not complete
 ---
