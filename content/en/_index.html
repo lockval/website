@@ -54,10 +54,10 @@ lock
 
 
 {{% blocks/feature icon="fa-baby" title="Easy to use" %}}
-
+[run the code in playground](https://playground.lockval.com/?lang=JavaScript&code=97aa205250922a6839f4595ae0002711c93435fb)
 {{< card-code lang="JavaScript" >}}
 // request
-main(input){
+function main(input){
   // Get data
   input.GetSubVal(input.UID,"mBase","Count")
   input.GetAndLock()
@@ -74,7 +74,7 @@ main(input){
   input.PutAndUnlock()
 
   // response
-  return { "resp": "this is resp" }
+  return { "resp": c }
 }
 {{< /card-code >}}
 {{% /blocks/feature %}}
