@@ -166,26 +166,28 @@ no = 'Sorry to hear that. Please <a href="https://github.com/lockval/website/iss
 enable = false
 
 [params.links]
+
 # End user relevant links. These will show up on left side of footer and in the community page if you have one.
-#[[params.links.user]]
-#  name = "User mailing list"
-#  url = "https://example.org/mail"
-#  icon = "fa fa-envelope"
-#  desc = "Discussion and help from your fellow users"
-#[[params.links.user]]
-#  name ="Twitter"
-#  url = "https://example.org/twitter"
-#  icon = "fab fa-twitter"
-#  desc = "Follow us on Twitter to get the latest news!"
-#[[params.links.user]]
-#  name = "Stack Overflow"
-#  url = "https://example.org/stack"
-#  icon = "fab fa-stack-overflow"
-#  desc = "Practical questions and curated answers"
+[[params.links.user]]
+  name = "GitHub Discussions"
+  url = "https://github.com/lockval/lockval/discussions"
+  icon = "fa fa-envelope"
+  desc = "Discussion and help from your fellow users"
+[[params.links.user]]
+  name = "Stack Overflow"
+  url = "https://stackoverflow.com/questions/tagged/lockval"
+  icon = "fab fa-stack-overflow"
+  desc = "Practical questions and curated answers"
+[[params.links.user]]
+  name ="business"
+  url = "mailto:business@lockval.com"
+  icon = "fa-light fa-envelope"
+  desc = "Contact us by email"
+
 # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
 [[params.links.developer]]
   name = "GitHub"
-  url = "https://github.com/lockval/website"
+  url = "https://github.com/lockval"
   icon = "fab fa-github"
   desc = "Development takes place here!"
 #[[params.links.developer]]
