@@ -15,3 +15,9 @@ Currently you can learn how to use and build Lockval Engine by visiting [apidemo
 
 If you can, please click "Edit this page" on the right to help our improve it
 {{% /pageinfo %}}
+
+
+Lockval Engine base architecture:
+
+![architecture](/arch.svg "base architecture")
+
