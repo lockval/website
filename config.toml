@@ -174,15 +174,16 @@ enable = false
   icon = "fa fa-envelope"
   desc = "Discussion and help from your fellow users"
 [[params.links.user]]
-  name = "Stack Overflow"
-  url = "https://stackoverflow.com/questions/tagged/lockval"
-  icon = "fab fa-stack-overflow"
-  desc = "Practical questions and curated answers"
-[[params.links.user]]
   name ="business"
   url = "mailto:business@lockval.com"
   icon = "fa-light fa-envelope"
-  desc = "Contact us by email"
+  desc = "Contact us"
+#[[params.links.user]]
+#  name = "Stack Overflow"
+#  url = "https://stackoverflow.com/questions/tagged/lockval"
+#  icon = "fab fa-stack-overflow"
+#  desc = "Practical questions and curated answers"
+
 
 # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
 [[params.links.developer]]
