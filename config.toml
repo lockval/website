@@ -171,12 +171,12 @@ enable = false
 [[params.links.user]]
   name = "GitHub Discussions"
   url = "https://github.com/lockval/lockval/discussions"
-  icon = "fa fa-envelope"
+  icon = "fa fa-comment"
   desc = "Discussion and help from your fellow users"
 [[params.links.user]]
   name ="business"
   url = "mailto:business@lockval.com"
-  icon = "fa-light fa-envelope"
+  icon = "fa fa-envelope"
   desc = "Contact us"
 #[[params.links.user]]
 #  name = "Stack Overflow"
