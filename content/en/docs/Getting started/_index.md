@@ -10,7 +10,7 @@ weight: 2
 {{% pageinfo %}}
 This page is not complete. 
 
-Currently you can learn how to use and build Lockval Engine by visiting [apidemo](https://apidemo.lockval.com)
+you can learn how to use and build Lockval Engine by visiting [apidemo](https://apidemo.lockval.com)
 
 
 If you can, please click "Edit this page" on the right to help our improve it

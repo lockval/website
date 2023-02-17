@@ -1,7 +1,7 @@
 
 ---
-title: "configuration"
-linkTitle: "configuration"
+title: "Configuration"
+linkTitle: "Configuration"
 weight: 8
 
 ---
