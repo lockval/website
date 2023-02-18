@@ -1,7 +1,7 @@
 
 ---
-title: "All In One"
-linkTitle: "All In One"
+title: "Architecture"
+linkTitle: "Architecture"
 weight: 8
 
 ---

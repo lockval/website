@@ -17,8 +17,3 @@ lockval only supports running in a Linux 64bit(arm/amd) environment, so you need
 - unzip the zip file you downloaded
 - run 'start.sh'
 
-## about 'config.yaml'
-config.yaml is the trigger configuration file. It can configure cron timer to call api and call api through http server, as well as debug script and other functions
-- key: 1111 # update this file password
-- pwd: 2222 # debug script password. like playground
-- chk: 3333 # call api password
