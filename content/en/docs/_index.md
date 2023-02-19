@@ -8,12 +8,9 @@ menu:
     weight: 20
 ---
 
-{{% pageinfo %}}
+Basic idea
 
-We're really sorry that the entire documentation page didn't start writing.
-
-If you can, please click "Edit this page" on the right to help our improve it
-{{% /pageinfo %}}
+The Lockval engine treats the entire environment (including front-end data) as one ACID database. When you write code that changes the value. The modified data will be synchronized to the background database and also to the front end.
 
 Lockval Engine base architecture:
 
