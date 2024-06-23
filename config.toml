@@ -21,6 +21,9 @@ enableGitInfo = true
 tag = "tags"
 category = "categories"
 
+[params.meta]
+favicon = false
+
 [params.taxonomy]
 # set taxonomyCloud = [] to hide taxonomy clouds
 taxonomyCloud = ["tags", "categories"] 
