@@ -89,6 +89,7 @@ weight = 1
 section = ["HTML", "print", "RSS"]
 
 [params]
+favicon = "favicon.ico"
 copyright = "The Lockval Engine Authors"
 # privacy_policy = "https://policies.google.com/privacy"
 
