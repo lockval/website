@@ -14,8 +14,9 @@ linkTitle = "Lockval Engine"
 	</a>
 	<p class="lead mt-7">Lockval Engine is a distributed backend DATA engine</p>
 	<p class="lead mt-7">that can simulate the rules of the world in your imagination</p>
-	{{< blocks/link-down color="info" >}}
+	
 </div>
+{{< blocks/link-down color="info">}}
 {{< /blocks/cover >}}
 
 
@@ -24,29 +25,29 @@ Lockval Engine is commonly used in game backends
 
 It integrates network gateway module, data storage module and logic script processing module, as well as triggers module.
 
-You just need to deal with ***request***, ***response*** and ***Get data*** , ***Calculation*** and ***Set data***.
+You just need to deal with **request**, **response** and **Get data** , **Calculation** and **Set data**.
 
 The change data will be automatically synchronized to the interface caller.
 
 {{% /blocks/lead %}}
 
-{{< blocks/section color="white" >}}
+{{< blocks/section color="white" type="row">}}
 
 
 {{% blocks/feature icon="fab fa-github" title="Multiple programming script support" url="/docs/languages" %}}
-[***Lua(5.1)***](https://www.lua.org/manual/5.1/)
+[**Lua(5.1)**](https://www.lua.org/manual/5.1/)
 
 - Lua a lightweight, high-level, multi-paradigm programming language.
 
-[***JavaScript(TypeScript)***](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
+[**JavaScript(TypeScript)**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
 
 - JavaScript  is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions.
 
-[***Python(Starlark)***](https://bazel.build/rules/language)
+[**Python(Starlark)**](https://bazel.build/rules/language)
 
 - Starlark is a dialect of Python. Like Python, it is a dynamically typed language with high-level data types.
 
-[***Golang***](https://go.dev/doc/)
+[**Golang**](https://go.dev/doc/)
 
 - Go is a statically typed, compiled programming language. Use golang to achieve higher performance programs.
 
@@ -57,46 +58,38 @@ The change data will be automatically synchronized to the interface caller.
 [run the code in playground (JS)](https://playground.lockval.com/?lang=JavaScript&code=09d2a95dfed947ee26767c79ef380adea780bd4e)
 ([Python](https://playground.lockval.com/?lang=Python&code=7fcbe4534a8ac3f3b7ca905b18dcf69c73293fd8))
 ([Lua](https://playground.lockval.com/?lang=Lua&code=5c1aefe6ba01870d7a9867b2388e10a9683bf021))
-{{< card-code lang="JavaScript" >}}
-// request
-function main(input){
-  // Get data
-  input.GetSubVal(input.UID,"mBase","Count")
-  input.GetAndLock()
+### Core APIs (only 8 in total):
+- **data reading and writing**
+- `GetSubVal`
+- `GetSubValAll`
+- `GetAndLock`
+- `PutSubVal`
+- `PutAndUnlock`
+- `DiscardAndUnlock`
+- **Throw common error msg to cli**
+- `Throw`
+- **Delay and execute a command**
+- `Sleep`
 
-  // Calculation
-  let c = input.GetResp.IDKey[input.UID].
-  	KeySub["mBase"].SubVal["Count"]
-  let ci = Number(c)
-  ci++
-  c = ci.toString()
-	
-  // Set data
-  input.PutSubVal(input.UID,"mBase","Count",c)
-  input.PutAndUnlock()
 
-  // response
-  return { "resp": c }
-}
-{{< /card-code >}}
 {{% /blocks/feature %}}
 
 
 {{% blocks/feature icon="fa fa-braille" title="Module（services) Introduction" url="/docs/architecture" %}}
 
-***gw***
+**gw**
 
 - Responsible for processing data communication, sending requests to api, and synchronizing to callers when db data changes
 
-***api***
+**api**
 
 - Respond to the request and process the data using the user's server-side script
 
-***db***
+**db**
 
 - Responsible for processing GetAndLock and PutAndUnlock, locking data when obtaining data, and unlocking data after modifying data. Data is cached in memory during use and released when not in use.
 
-***trigger***
+**trigger**
 
 - Provides a variety of triggers to trigger script execution, including:
 timer, cron, http action, upload script
@@ -120,7 +113,7 @@ timer, cron, http action, upload script
 
 
 
-{{< blocks/section >}}
+{{< blocks/section type="row">}}
 
 {{% blocks/feature icon="fa fa-graduation-cap" title="Learn Quickly" url="/docs/learn" %}}
 
@@ -135,7 +128,7 @@ Through the online [apidemo](https://apidemo.lockval.com) and [playground](https
 
 {{% blocks/feature icon="fa fa-keyboard" title="Build Quickly" url="/docs/build" %}}
 
-You just need to surround  ***request***, ***response*** and ***Get data*** , ***Calculation*** and ***Set data***.
+You just need to surround  **request**, **response** and **Get data** , **Calculation** and **Set data**.
 
 that can complete a simple business development.
 
