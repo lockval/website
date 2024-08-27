@@ -61,7 +61,7 @@ id = "UA-00000000-0"
 [languages]
 [languages.en]
 title = "Lockval Engine"
-description = "A distributed,reliable key-value service engine that can run scripts."
+# description = "A distributed,reliable key-value service engine that can run scripts."
 languageName ="English"
 # Weight used for sorting.
 weight = 1
@@ -132,8 +132,7 @@ github_branch= "master"
 # Google Custom Search Engine ID. Remove or comment out to disable search.
 gcs_engine_id = "87b5b85a7a12141ba"
 
-# Enable Algolia DocSearch
-algolia_docsearch = false
+
 
 # Enable Lunr.js offline search
 offlineSearch = false
@@ -146,7 +145,7 @@ prism_syntax_highlighting = false
 #  Set to true to disable breadcrumb navigation.
 breadcrumb_disable = false
 # Set to true to disable the About link in the site footer
-footer_about_disable = false
+footer_about_enable = true
 # Set to false if you don't want to display a logo (/assets/icons/logo.svg) in the top navbar
 navbar_logo = false
 # Set to true if you don't want the top navbar to be translucent when over a `block/cover`, like on the homepage.

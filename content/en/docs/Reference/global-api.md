@@ -31,7 +31,7 @@ After loading some plugins. Your plugin will be in G["YourPluginName"]
 
 How to use, let's give a simple example:
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 
 {{< tab header="Language：" disabled=true />}}
 

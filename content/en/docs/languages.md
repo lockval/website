@@ -10,7 +10,7 @@ For a wider range of use, Lockval Engine supports multiple languages. You can us
 
 ## Support languages
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 
 {{< tab header="Language：" disabled=true />}}
 

@@ -33,7 +33,7 @@ https://github.com/lockval/go2plugin/blob/main/input.go
 
 How to use, let's give a simple example:
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 
 {{< tab header="Language：" disabled=true />}}
 

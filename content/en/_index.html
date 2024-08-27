@@ -1,176 +1,85 @@
 +++
 title = "Lockval Engine"
 linkTitle = "Lockval Engine"
-
 +++
-
-{{< blocks/cover title="Lockval Engine is free Game backend engine" image_anchor="top" height="full" color="orange" >}}
+{{< blocks/cover title="Explore Lockval Engine: A Free Game Backend Engine" image_anchor="top" height="full" >}}
 <div class="mx-auto">
 	<a class="btn btn-lg btn-primary mr-3 mb-4" href="https://apidemo.lockval.com/">
-		Run DEMO <i class="fas fa-arrow-alt-circle-right ml-2"></i>
+		Try the DEMO <i class="fas fa-arrow-alt-circle-right ml-2"></i>
 	</a>
 	<a class="btn btn-lg btn-secondary mr-3 mb-4" href="https://github.com/lockval/apidemo">
-		Build DEMO <i class="fa fa-download"></i>
+		Build the DEMO <i class="fa fa-download"></i>
 	</a>
-	<p class="lead mt-7">Lockval Engine is a distributed backend DATA engine</p>
-	<p class="lead mt-7">that can simulate the rules of the world in your imagination</p>
-	
+	<p class="lead mt-5">A robust, distributed backend data engine designed to power the world of gaming.</p>
+	<p class="lead mt-3">Simulate complex world rules effortlessly with Lockval Engine.</p>
 </div>
 {{< blocks/link-down color="info">}}
 {{< /blocks/cover >}}
 
-
 {{% blocks/lead color="primary" %}}
-Lockval Engine is commonly used in game backends
+Lockval Engine, tailored for game backends, seamlessly integrates various modules such as network gateways, data storage, logic script processing, and triggers, simplifying your workflow significantly.
 
-It integrates network gateway module, data storage module and logic script processing module, as well as triggers module.
-
-You just need to deal with **request**, **response** and **Get data** , **Calculation** and **Set data**.
-
-The change data will be automatically synchronized to the interface caller.
-
+Focus on **request handling**, **data retrieval**, **computation**, and **data updating**. Changes are automatically propagated to interface callers.
 {{% /blocks/lead %}}
 
 {{< blocks/section color="white" type="row">}}
 
+{{% blocks/feature icon="fab fa-github" title="Support for Multiple Programming Languages" url="/docs/languages" %}}
+Explore our extensive support for various scripting languages:
 
-{{% blocks/feature icon="fab fa-github" title="Multiple programming script support" url="/docs/languages" %}}
-[**Lua(5.1)**](https://www.lua.org/manual/5.1/)
+[**Lua (5.1)**](https://www.lua.org/manual/5.1/) - A lightweight, multi-paradigm programming language.
 
-- Lua a lightweight, high-level, multi-paradigm programming language.
+[**JavaScript (TypeScript)**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide) - A versatile, just-in-time compiled language with first-class functions.
 
-[**JavaScript(TypeScript)**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
+[**Python (Starlark)**](https://bazel.build/rules/language) - A dialect of Python designed for configurations.
 
-- JavaScript  is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions.
-
-[**Python(Starlark)**](https://bazel.build/rules/language)
-
-- Starlark is a dialect of Python. Like Python, it is a dynamically typed language with high-level data types.
-
-[**Golang**](https://go.dev/doc/)
-
-- Go is a statically typed, compiled programming language. Use golang to achieve higher performance programs.
-
+[**Golang**](https://go.dev/doc/) - A statically typed language known for its simplicity and high performance.
 {{% /blocks/feature %}}
 
+{{% blocks/feature icon="fa-baby" title="Ease of Use" %}}
+Experience our API through the playground:
+- [JavaScript Playground](https://playground.lockval.com/?lang=JavaScript&code=09d2a95dfed947ee26767c79ef380adea780bd4e)
+- [Python Playground](https://playground.lockval.com/?lang=Python&code=7fcbe4534a8ac3f3b7ca905b18dcf69c73293fd8)
+- [Lua Playground](https://playground.lockval.com/?lang=Lua&code=5c1aefe6ba01870d7a9867b2388e10a9683bf021)
 
-{{% blocks/feature icon="fa-baby" title="Easy to use" %}}
-[run the code in playground (JS)](https://playground.lockval.com/?lang=JavaScript&code=09d2a95dfed947ee26767c79ef380adea780bd4e)
-([Python](https://playground.lockval.com/?lang=Python&code=7fcbe4534a8ac3f3b7ca905b18dcf69c73293fd8))
-([Lua](https://playground.lockval.com/?lang=Lua&code=5c1aefe6ba01870d7a9867b2388e10a9683bf021))
-### Core APIs (only 8 in total):
-- **data reading and writing**
-- `GetSubVal`
-- `GetSubValAll`
-- `GetAndLock`
-- `PutSubVal`
-- `PutAndUnlock`
-- `DiscardAndUnlock`
-- **Throw common error msg to cli**
-- `Throw`
-- **Delay and execute a command**
-- `Sleep`
-
-
+**Core APIs (only 8 in total):**
+- Data operations simplified: `GetSubVal`, `GetSubValAll`, `GetAndLock`, `PutSubVal`, `PutAndUnlock`, `DiscardAndUnlock`
+- Manage exceptions seamlessly: `Throw`
+- Schedule tasks effectively: `Sleep`
 {{% /blocks/feature %}}
 
+{{% blocks/feature icon="fa fa-braille" title="Module Overview" url="/docs/architecture" %}}
+Learn more about the modules powering Lockval Engine:
 
-{{% blocks/feature icon="fa fa-braille" title="Module（services) Introduction" url="/docs/architecture" %}}
+**Gateway (gw)**: Manages data communication, sends API requests, and synchronizes database changes to callers.
 
-**gw**
+**API Module (api)**: Processes requests using server-side scripts defined by the user.
 
-- Responsible for processing data communication, sending requests to api, and synchronizing to callers when db data changes
+**Database (db)**: Handles transactions like `GetAndLock` and `PutAndUnlock`, ensuring data integrity through locking mechanisms.
 
-**api**
-
-- Respond to the request and process the data using the user's server-side script
-
-**db**
-
-- Responsible for processing GetAndLock and PutAndUnlock, locking data when obtaining data, and unlocking data after modifying data. Data is cached in memory during use and released when not in use.
-
-**trigger**
-
-- Provides a variety of triggers to trigger script execution, including:
-timer, cron, http action, upload script
-
-
+**Trigger System (trigger)**: Offers a range of triggers to execute scripts based on events such as timers, cron jobs, HTTP actions, or script uploads.
 {{% /blocks/feature %}}
-
 
 {{< /blocks/section >}}
-
-
-
-
 
 {{< blocks/lead >}}
 <div class="col">
-<h1 class="text-center">Why Lockval Engine</h1>
+<h1 class="text-center">Why Choose Lockval Engine?</h1>
 </div>
-
 {{< /blocks/lead >}}
-
-
 
 {{< blocks/section type="row">}}
 
-{{% blocks/feature icon="fa fa-graduation-cap" title="Learn Quickly" url="/docs/learn" %}}
-
-Lockval Engine is an out-of-the-box engine
-
-You only need to download the [apidemo](https://github.com/lockval/apidemo) program to run the engine
-
-Through the online [apidemo](https://apidemo.lockval.com) and [playground](https://playground.lockval.com) projects, you can quickly understand the use of api.
-
+{{% blocks/feature icon="fa fa-graduation-cap" title="Quick Learning Curve" url="/docs/learn" %}}
+Lockval Engine is designed to be out-of-the-box. Simply download the [apidemo](https://github.com/lockval/apidemo) to start running the engine, and utilize the [online apidemo](https://apidemo.lockval.com) and [playground](https://playground.lockval.com) to quickly grasp API usage.
 {{% /blocks/feature %}}
 
-
-{{% blocks/feature icon="fa fa-keyboard" title="Build Quickly" url="/docs/build" %}}
-
-You just need to surround  **request**, **response** and **Get data** , **Calculation** and **Set data**.
-
-that can complete a simple business development.
-
+{{% blocks/feature icon="fa fa-keyboard" title="Rapid Development" url="/docs/build" %}}
+Focus on core actions: **request**, **response**, **data retrieval**, **computation**, and **data storage** to efficiently develop complex business logic.
 {{% /blocks/feature %}}
 
-
-{{% blocks/feature icon="fa fa-desktop" title="All In One" url="/docs/architecture" %}}
-You don't need to think about how to choose a database, 
-
-how to design a protocol, design timers, triggers.
-
-you only need to care about data processing to complete all the functions you need
-
+{{% blocks/feature icon="fa fa-desktop" title="Comprehensive Solution" url="/docs/architecture" %}}
+With Lockval Engine, forget the hassle of choosing databases, designing protocols, or configuring triggers. Focus solely on data processing to fulfill all your developmental needs.
 {{% /blocks/feature %}}
-
 
 {{< /blocks/section >}}
-
-<!-- {{< blocks/lead >}}
-
-<div class="col-12">
-<h1 class="text-center">This is another Section</h1>
-</div>
-
-{{< /blocks/lead >}}
-
-{{< blocks/section >}}
-
-{{% blocks/feature icon="fab fa-app-store-ios" title="Download **from AppStore**" %}}
-Get the Goldydocs app!
-{{% /blocks/feature %}}
-
-
-{{% blocks/feature icon="fab fa-github" title="Contributions welcome!" url="https://github.com/google/docsy-example" %}}
-We do a [Pull Request](https://github.com/google/docsy-example/pulls) contributions workflow on **GitHub**. New users are always welcome!
-{{% /blocks/feature %}}
-
-
-{{% blocks/feature icon="fab fa-twitter" title="Follow us on Twitter!" url="https://twitter.com/GoHugoIO" %}}
-For announcement of latest features etc.
-{{% /blocks/feature %}}
-
-{{< /blocks/section >}} -->
-
-
